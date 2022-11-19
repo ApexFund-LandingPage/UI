@@ -1,0 +1,7 @@
+.buttonGroup > button{
+    /* background: linear-gradient(180deg, #6C54A4 0%, #5E8CC9 100%); */
+    height: 3rem;
+    width: 10rem;
+    font-size: large;
+    font-weight: bolder;
+}

@@ -1,0 +1,43 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: normalFont;
+  src: url(./fonts/normal.otf);
+}
+
+
+@font-face {
+  font-family: boldFont;
+  src: url(./fonts/bold.otf);
+}
+
+@font-face {
+  font-family: regular;
+  src: url(./fonts/regular.otf);
+}
+
+
+@font-face {
+  font-family: mortendFont;
+  src: url(./fonts/normalm.ttf);
+}
+
+@font-face {
+  font-family: mortendFont1;
+  src: url(./fonts/uppercase.otf);
+}
+
+@font-face {
+  font-family: futur;
+  src: url(./fonts/futur.ttf);
+}
+
+
+body{
+  font-family: normalFont;
+}
