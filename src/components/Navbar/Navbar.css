@@ -57,7 +57,7 @@
             height: 50px;
             transition:  0.5s linear;
             display: flex;
-            margin: 0 0 0 2vw;
+            margin: 0 0 0.5rem 2vw;
             align-items: center;
             text-decoration: none;
             color: #000;
@@ -99,14 +99,16 @@
             transition: all .35s ease;
             font-size: 18px;
             font-family: boldFont;
-          
+            margin: 0 !important;
+            padding: 0 !important;
             text-transform: uppercase;
           }
           
           .list li {
             display: inline-block;
             list-style: outside none none;
-            padding: 0;
+            /* margin: 0 !important;
+            padding: 0 !important; */
           }
           
          
@@ -116,6 +118,8 @@
             position: relative;
             text-decoration: none;
             font-size: 18px;
+            /* margin: 0 !important;
+            padding: 0 !important; */
           }
           
           /* .list a::before,
@@ -166,10 +170,11 @@
           }
         
 
-        @media(max-width: 1300px){
+        @media(max-width: 1500px){
           .list{
+            width: 40rem;
             margin: 0 1rem 0 0;
-          }
+        }
           .Logo{
            
             margin: 0 0 0 2rem;

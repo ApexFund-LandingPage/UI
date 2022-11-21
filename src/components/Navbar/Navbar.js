@@ -57,7 +57,7 @@ const Navbar = () => {
             }}
           >
             <img src={logo} alt="Logo" className="Logo" />
-            <Heading faktumFont Text="HOLOBET" m="0.5rem 0 0 1rem" 
+            <Heading faktumFont Text="HOLOBET" m="0 0 0 1rem" 
               size="38px" ls="0.1rem"
             />
           </Link>
