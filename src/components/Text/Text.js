@@ -1,7 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
+import { useLocation } from "react-router-dom";
 
 const Text = (props) => {
+
+
+
 
     const StyledText = styled.p`
         font-size:${props.size ? props.size : "18px"};
@@ -28,7 +32,7 @@ const Text = (props) => {
     
     return (
         <StyledText> 
-            {props.Text ? props.Text : "Default Text"}
+            {props.Text ? props.Text : ""}
         </StyledText>
     )
 }

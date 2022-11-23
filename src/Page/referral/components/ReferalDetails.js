@@ -1,38 +1,41 @@
 import React from 'react'
 import styled from 'styled-components'
+import { getHandsomeWalletAddress } from '../../../utils'
 import { Flex } from '../../buy/components/Flex'
 import DetailBox from '../../claim/components/DetailBox'
 
-const ReferalDetails = () => {
 
-    const StyledReferalDetail = styled(Flex)`
-        justify-content: space-between;
-        margin: 2rem 0 0 0;
+const StyledReferalDetail = styled(Flex)`
+justify-content: space-between;
+margin: 2rem 0 0 0;
 
-        @media(max-width: 1000px){
-            flex-direction: column;
-        }
-    `
+@media(max-width: 1000px){
+    flex-direction: column;
+}
+`
 
+const ReferalDetails = ({info}) => {
+    console.log({info})
+    const {myReferrer,totalComissionEarnt,totalReferralCount} = info
   return (
     <StyledReferalDetail>
         <DetailBox 
             heading="Your Referrer"
-            value="0x3456...7e8D"
+              value={<a href="#">{getHandsomeWalletAddress(myReferrer)}</a>}
             NoHBT
         />
         <DetailBox 
             heading="Number of Referrals"
-            value="00"
+            value={totalReferralCount}
             NoHBT
             xm="2rem 0"
             center
         />
-        <DetailBox 
+        {/* <DetailBox 
             heading="Referral Commissions Earned"
-            value="0000"
+            value={totalComissionEarnt}
             center
-        />
+        /> */}
     </StyledReferalDetail>
   )
 }

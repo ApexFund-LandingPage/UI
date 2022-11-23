@@ -5,12 +5,13 @@ import Line from '../../../components/Line/Line'
 import Button from '../../../components/Button/Button'
 import styled from 'styled-components'
 
+const StyledReward = styled(Flex)`
+flex-direction: column;
+// margin: 4rem 0 0 0;
+`
+
 const MobileRewards = () => {
 
-  const StyledReward = styled(Flex)`
-    flex-direction: column;
-   // margin: 4rem 0 0 0;
-  `
 
   return (
     <StyledReward>

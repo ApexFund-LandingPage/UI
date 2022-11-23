@@ -6,24 +6,27 @@ import coin from '../coin.png'
 import Tilt from 'react-parallax-tilt';
 import styled from 'styled-components'
 
+
+
+const StyledToken = styled.div`
+display: flex;
+flex-direction: column;
+align-items: center;
+`
+const Image = styled(Tilt)`
+height: 30rem;
+width: 25rem;
+margin: 1rem 0 0 0;
+
+@media(max-width: 450px){
+    height: 25rem;
+    width: 98%;
+}
+
+
+`
 const Tokken = () => {
 
-    const StyledToken = styled.div`
-        display: flex;
-        flex-direction: column;
-       align-items: center;
-    `
-    const Image = styled(Tilt)`
-        height: 30rem;
-        width: 25rem;
-        margin: 1rem 0 0 0;
-
-        @media(max-width: 450px){
-            height: 25rem;
-            width: 98%;
-        }
-
-    `
 
   return (
     <StyledToken>

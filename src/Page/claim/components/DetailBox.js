@@ -4,24 +4,26 @@ import Heading from '../../../components/Heading/Heading'
 import styled from 'styled-components'
 import Button from '../../../components/Button/Button'
 
+
+const StyledBox = styled.div`
+margin: ${props=>props.m ? props.m : ''};
+
+@media(max-width: 1000px){
+    margin : ${props=>props.xm ? props.xm : ''};
+}
+
+@media(max-width: 768px){
+    margin : ${props=> props.xm ? props.xm : props.xx ? props.xx : ''};
+}
+
+@media(max-width: 600px){
+    margin : ${props=> props.xm ? props.xm : props.xx ? props.xx : props.mm ? props.mm : ''};
+}
+`
+
 const DetailBox = (props) => {
 
-    const StyledBox = styled.div`
-        margin: ${props.m ? props.m : ''};
-
-        @media(max-width: 1000px){
-            margin : ${props.xm ? props.xm : ''};
-        }
-
-        @media(max-width: 768px){
-            margin : ${ props.xm ? props.xm : props.xx ? props.xx : ''};
-        }
-
-        @media(max-width: 600px){
-            margin : ${ props.xm ? props.xm : props.xx ? props.xx : props.mm ? props.mm : ''};
-        }
-    `
-
+  
   return (
     <StyledBox>
         <Flex style={{justifyContent: props.center ? 'center' : 'flex-start'}} >
@@ -46,18 +48,21 @@ const DetailBox = (props) => {
                 ms = {props.big ? "30px" : "20px"}
                 right
             />
-            { props.NoHBT ? null :
-                <Heading Text="$HBT"
+          <Heading Text={props.subText}
                     futur gradient size={ props.big ? "18px" : "16px"}
                     lg = {props.big ? "16px" : "14x"}
                     xm = {props.big ? "14px" : "12px"}
                     ms = {props.big ? "14px" : "12px"}
                 />
-            }
         </Flex>
         <Flex style={{alignItems:'center',justifyContent:'center'}}>
             { props.btn ?
-            <Button nav navWidth="10rem" navSmall="6rem" navPs="0 0.25rem"
+                  <Button nav navWidth="10rem" navSmall="6rem" navPs="0 0.25rem"
+                      onClick={() => {
+                          if (props.onClick) {
+                              props.onClick()
+                          }
+                      }}
                 Text={props.value ? props.value : 'STAKE NOW'} m="0.75rem 0 0 0" />
                 : null
             }

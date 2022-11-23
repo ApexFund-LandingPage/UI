@@ -4,7 +4,7 @@ import { ButtonGroup } from 'react-button-group-tis'
 import 'react-button-group-tis/dist/index.css'
 import './ButtonGroup.css'
 
-const ButtonContainer = () => {
+const ButtonContainer = ({onStakeModeEnabled}) => {
 
 
   return (
@@ -12,7 +12,9 @@ const ButtonContainer = () => {
       //className='ButtonGroup'
       className="buttonGroup"
       items={['STAKE', 'UNSTAKE']}
-      onItemClick={(index, item) => console.log(`"${item}" selected!`)}
+      onItemClick={(index, item) => {
+        onStakeModeEnabled(index==0)
+      }}
       darkMode={true}
     />
   )

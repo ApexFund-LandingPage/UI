@@ -1,28 +1,82 @@
-import React from 'react'
-import Heading from '../../../components/Heading/Heading'
-import Button from '../../../components/Button/Button'
-import { StyledStakeAmount,Absolute, Input, InputContainer } from './StyledStakeAmount'
+import React, { useState } from "react";
+import Heading from "../../../components/Heading/Heading";
+import Button from "../../../components/Button/Button";
+import {
+  StyledStakeAmount,
+  Absolute,
+  Input,
+  StyledInput,
+  InputContainer,
+} from "./StyledStakeAmount";
 
-const StakeAmount = () => {
+const StakeAmount = ({
+  hbtBalance = 0,
+  stakedAmount = 0,
+  isStakeMode = true,
+  hasApprovedStaking = false,
+  loading = false,
+  onClick,
+  onStakingInput
+}) => {
+  const [inputAmount, setInputAmount] = useState();
+  const renderButtonText = () => {
+    if (isStakeMode) {
+      if (!hasApprovedStaking) {
+        return "Approve Contract";
+      } else {
+        return "Stake";
+      }
+    } else {
+      return "Unstake";
+    }
+  };
 
   return (
     <StyledStakeAmount>
-        <Heading Text='Stake amount ($HBT)'
-            regular size="24px" m="0 0 0 0.25rem"
+      <Heading
+        Text={`${isStakeMode ? "Stake" : "Unstake"} amount ($HBT)`}
+        regular
+        size="24px"
+        m="0 0 0 0.25rem"
+      />
+      <InputContainer>
+        <StyledInput
+          type="number"
+          onChange={(t) => {
+            setInputAmount(t.target.value);
+            onStakingInput(t.target.value)
+          }}
+          value={inputAmount}
         />
-        <InputContainer>
-            <Input type='number' placeholder='' />
-            <Absolute>
-                <Button Text="MAX" nav br="0.5rem" navBr="0.5rem"
-                    width="8rem" height="3.3rem" Inheight = "3.1rem"
-                />
-            </Absolute>
-        </InputContainer>
-        <Heading Text='00000 $HBT avaliable'
-            regular size="16px" m="0 0 0 0.25rem"
-        />
-    </StyledStakeAmount>
-  )
-}
+        <Absolute>
+          <Button
+            onClick={() => {
+              setInputAmount(
+                isStakeMode ? hbtBalance / 1e18 : stakedAmount / 1e18
+              );
+            }}
+            Text="MAX"
+            nav
+            br="0.5rem"
+            navBr="0.5rem"
+            width="8rem"
+            height="3.3rem"
+            Inheight="3.1rem"
+          />
+        </Absolute>
+      </InputContainer>
+      <Heading
+        Text={`${
+          isStakeMode ? hbtBalance / 1e18 : stakedAmount / 1e18
+        } $HBT Available to ${isStakeMode ? "Stake" : "Unstake"}`}
+        regular
+        size="16px"
+        m="0 0 0 0.25rem"
+      />
 
-export default StakeAmount
+      <Button Text={renderButtonText()} loading={loading} onClick={()=>{onClick()}} />
+    </StyledStakeAmount>
+  );
+};
+
+export default StakeAmount;

@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { motion } from 'framer-motion';
+import Spinner from '../Spinner';
 
 const Button = (props) => {
 
@@ -45,17 +46,31 @@ const Button = (props) => {
         }
     `
 
+
+    const renderContent = () => {
+        
+        if (props.loading) {
+            return <Spinner/>
+        }
+
+        return props.Text
+    }
+
     return (
-        <StyledButton type="button" 
+        <StyledButton
+            
+            {...props}
+            type="button" 
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.75 }}
         >
             { props.nav ? 
             <ButtonInside>
-                {props.Text? props.Text : "Default Button"}
+                {renderContent()}
             </ButtonInside>
             :
-                props.Text? props.Text : "Default Button"
+            renderContent()
+
             }
         </StyledButton>
     )

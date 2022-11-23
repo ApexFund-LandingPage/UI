@@ -1,5 +1,7 @@
 import React,{useState, useEffect, useRef } from 'react'
 import './Navbar.css';
+import { useWallet } from 'use-wallet'
+
 import styled from 'styled-components';
 import { Burger, Menu } from './components';
 import FocusLock from 'react-focus-lock';
@@ -7,6 +9,7 @@ import { Link } from 'react-router-dom'
 import Button from '../Button/Button'
 import logo from './logo.svg'
 import Heading from '../Heading/Heading';
+import { getHandsomeWalletAddress } from '../../utils';
 
 const Link2 = styled(Link)`
   display: flex;
@@ -18,7 +21,13 @@ const Link2 = styled(Link)`
 `;
 
 const Navbar = () => {
+  const wallet = useWallet()
 
+
+  useEffect(() => {
+    wallet.connect()
+  }, [])
+  
   const [open, setOpen] = useState(false);
   const node = useRef();
   const menuId = "main-menu";
@@ -86,8 +95,8 @@ const Navbar = () => {
                 CLAIM $HBT
               </Link2>  
 
-              <Link2 to="/referal" 
-                onClick={()=> isActive({...navItem,referal: true, default: false})}
+              <Link2 to="/referral" 
+                onClick={()=> isActive({...navItem,referral: true, default: false})}
                 style={{background: active.referal ? '#1C1C1C' : null,
                 height:'6rem',padding:'0 2rem',
                 color: active.referal ? '#5E8CC9' : null
@@ -120,7 +129,11 @@ const Navbar = () => {
           </div>
 
           <div className='PC'>
-            <Button nav height="2.75rem" Text="CONNECT WALLET" Inheight="2.5rem" />
+            <Button nav height="2.75rem" Text={wallet.account?getHandsomeWalletAddress(wallet.account)
+              : "CONNECT WALLET"} Inheight="2.5rem" onClick={() => {
+              console.log("clicked")
+              wallet.connect()
+            }} />
           </div>
             
           <div className='Mobile' ref={node}>

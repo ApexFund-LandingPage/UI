@@ -19,6 +19,29 @@ export const Input = styled.input`
     border: 1px solid rgba(94, 140, 201, 1);
     margin: 0.25rem 0;
 `
+
+export const StyledInput = styled.input`
+        color: ${props=>props.color ? props.color : '#FFFFFF'};
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 21px;
+        letter-spacing: 0.075em;
+        border: 2px solid #6166AE;
+        border-radius: ${props=>props.br ? props.br : '0.5rem'}; 
+        background-color: #303030;
+        margin: 0.25rem 0;
+        height: ${props=>props.height ? props.height: '3.5rem'};
+        width: 100%;
+        padding:2px;
+        &:placeholder{
+            color: #666666;
+        }
+
+        &:focus, &:focus{
+            outline: none;
+        }
+    `
+
 export const InputContainer = styled.div`
     width: 30rem;
     position: relative;
