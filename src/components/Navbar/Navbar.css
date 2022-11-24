@@ -99,8 +99,8 @@
             transition: all .35s ease;
             font-size: 18px;
             font-family: boldFont;
-            margin: 0 !important;
-            padding: 0 !important;
+            /* margin: 0 !important;
+            padding: 0 !important; */
             text-transform: uppercase;
           }
           

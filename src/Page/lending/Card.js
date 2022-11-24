@@ -164,7 +164,7 @@ const Card = () => {
           lg="35px"
           xm="27px"
           ms="27px"
-          m="0 0 1rem 0"
+          m="1rem 0 1rem 0"
         />
 
         <Button
@@ -269,6 +269,7 @@ const Card = () => {
               />
             </Flex>
             <MobileRow />
+            
             {!wallet.account ? (
               ConnectWalletView()
             ) : (

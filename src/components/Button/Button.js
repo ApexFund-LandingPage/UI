@@ -24,6 +24,7 @@ const Button = (props) => {
 
         @media(max-width: 768px){
             max-width: ${ props.navSmall ? props.navSmall : props.navWidth ? props.navWidth : "15rem" };
+            font-size:${ props.nav ? '9px' : props.fontSize ? props.fontSize : "12px" } ;
         }
 
         @media(max-width: 450px){

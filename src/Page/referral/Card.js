@@ -92,6 +92,9 @@ const Card = () => {
   const ConnectWalletView = () => {
     return (
       <>
+       <Desktop>
+       <StyledCard>
+          <InnerCard>  
         <Heading
           Text="Please Connect Your Wallet"
           size="40px"
@@ -109,6 +112,10 @@ const Card = () => {
             wallet.connect();
           }}
         />
+        
+        </InnerCard>
+        </StyledCard>
+        </Desktop>
       </>
     );
   };

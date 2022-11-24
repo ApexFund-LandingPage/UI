@@ -33,12 +33,12 @@ const Navbar = () => {
   const menuId = "main-menu";
 
   const navItem = {
-    buy : false,
+    buy : true,
     claim : false,
     referal : false,
     lending : false,
     staking : false, 
-    default : true,
+   // default : true,
   }
   const [navbar, setNavbar] = useState(false)
   const [active, isActive] = useState(navItem);
@@ -60,7 +60,7 @@ const Navbar = () => {
       <nav className={navbar ?  "navActiveLight": "nav"} >
         <div>
           <Link to="/" spy={true} smooth={true} 
-            onClick={()=> isActive({...navItem,default: false})}
+            onClick={()=> isActive({...navItem})}
             style={{display:'flex',alignItems:'center',
             textDecoration:'none'
             }}
@@ -76,7 +76,7 @@ const Navbar = () => {
             <ul className="list">
 
               <Link2 to="/" 
-                onClick={()=> isActive({...navItem, buy: true})}
+                onClick={()=> isActive({...navItem})}
                 style={{background: active.buy || active.default ? '#1C1C1C' : null, 
                 height:'6rem',padding:'0 2rem',
                 color: active.buy || active.default ? '#5E8CC9' : null
@@ -86,7 +86,7 @@ const Navbar = () => {
               </Link2>
 
               <Link2 to="/claim" 
-                onClick={()=> isActive({...navItem,claim: true, default: false})}
+                onClick={()=> isActive({...navItem,claim: true, buy: false})}
                 style={{background: active.claim ? '#1C1C1C' : null,
                 height:'6rem',padding:'0 2rem',
                 color: active.claim ? '#5E8CC9' : null
@@ -96,7 +96,7 @@ const Navbar = () => {
               </Link2>  
 
               <Link2 to="/referral" 
-                onClick={()=> isActive({...navItem,referral: true, default: false})}
+                onClick={()=> isActive({...navItem,referal: true, buy: false})}
                 style={{background: active.referal ? '#1C1C1C' : null,
                 height:'6rem',padding:'0 2rem',
                 color: active.referal ? '#5E8CC9' : null
@@ -106,7 +106,7 @@ const Navbar = () => {
               </Link2>
 
               <Link2 to="/lending" 
-                onClick={()=> isActive({...navItem,lending: true, default: false})}
+                onClick={()=> isActive({...navItem,lending: true, buy: false})}
                 style={{background: active.lending ? '#1C1C1C' : null,
                 height:'6rem',padding:'0 2rem',
                 color: active.lending ? '#5E8CC9' : null
@@ -116,7 +116,7 @@ const Navbar = () => {
               </Link2> 
 
               <Link2 to="/stake" 
-                onClick={()=> isActive({...navItem,staking: true, default: false})}
+                onClick={()=> isActive({...navItem,staking: true, buy: false})}
                 style={{background: active.staking ? '#1C1C1C' : null,
                 height:'6rem',padding:'0 2rem',
                 color: active.staking ? '#5E8CC9' : null

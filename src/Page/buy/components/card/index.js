@@ -205,10 +205,9 @@ const Card = () => {
         />
         <Button
           Text={"Copy Your Referrer Link"}
-          lightBorder
-          bg=""
           nav
-          m={"10px"}
+          Inheight="3rem"
+          m="1.5rem 0 0 0"
           onClick={() => {
             copyMyReferrerLink();
           }}
