@@ -42,19 +42,20 @@ const Stats = ({ purchaseInfo, presaleContract ,presaleEndTime}) => {
     <>
       <Flex column>
         <Heading
-          Text="Your Stats"
-          size="40px"
+                Text="YOUR STATS "
+                size="40px"
           faktumFont
           ls="0.1rem"
           lg="35px"
           xm="27px"
+          
           ms="27px"
         />
         <DetailBox
           big
-          m="2.5rem 0 0 0"
+          m="2.5rem 0 0 0.5rem"
           heading="Total Balance"
-          subText="$HBT"
+          subText=" $HBT"
           value={purchaseInfo.totalHBTBought / 1e18}
           center
         />

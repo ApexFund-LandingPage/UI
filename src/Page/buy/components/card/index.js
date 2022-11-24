@@ -204,7 +204,7 @@ const Card = () => {
           onClickPurchase={handleonPurchase}
         />
         <Button
-          Text={"Copy Your Referrer Link"}
+          Text={"Copy Your Referral Link"}
           nav
           Inheight="3rem"
           m="1.5rem 0 0 0"

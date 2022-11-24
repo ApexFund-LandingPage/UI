@@ -21,7 +21,9 @@ const FirstRow = ({
   return (
     <div style={{ width: "100%" }}>
       <CustomFlex>
-        <DetailBox heading="Loanable $xHBT" value={loanableAmount/1e18} center />
+        <DetailBox heading="Loanable $xHBT"
+          subText="$xHBT"
+          value={loanableAmount / 1e18} center />
         <DetailBox
           heading="Loan Status"
           value={isLoanTaken?"TAKEN":"NOT TAKEN"}

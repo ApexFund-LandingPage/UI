@@ -22,12 +22,15 @@ const Card = () => {
   const wallet = useWallet();
 
   const initializeContracts = async () => {
-    const web3 = new Web3(wallet.ethereum ? wallet.ethereum : CONFIG.RPC);
+    let provider = wallet.ethereum ? wallet.ethereum : CONFIG.RPC;
+    if (wallet.ethereum && Number(wallet.ethereum.chainId) != CONFIG.CHAIN_ID) {
+      provider = CONFIG.RPC
+    }
+    const web3 = new Web3(provider);
     const _presaleContract = new web3.eth.Contract(
       PresaleABI,
       CONFIG.HBTPresale
     );
-
     setPresaleContract(_presaleContract);
     setInitialized(true);
   };
@@ -138,7 +141,7 @@ const Card = () => {
           <>
             <>
               <Heading
-                Text="YOUR STATS"
+                Text="YOUR STATS "
                 size="40px"
                 faktumFont
                 ls="0.1rem"

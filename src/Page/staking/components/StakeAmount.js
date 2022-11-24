@@ -71,10 +71,14 @@ const StakeAmount = ({
         } $HBT Available to ${isStakeMode ? "Stake" : "Unstake"}`}
         regular
         size="16px"
-        m="0 0 0 0.25rem"
+        m="0 0  0.5rem  0.25rem"
       />
 
-      <Button Text={renderButtonText()} loading={loading} onClick={()=>{onClick()}} />
+      <div style={{alignContent:"center",alignItems:"center",textAlignLast:"center"}}>
+      <Button Text={renderButtonText()}
+        width={"50%"}
+        loading={loading} onClick={() => { onClick() }} />
+      </div>
     </StyledStakeAmount>
   );
 };

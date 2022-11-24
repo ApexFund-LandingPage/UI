@@ -48,7 +48,7 @@ const ReferalCode = ({totalComissionEarned}) => {
                 ms = { "16px"}
             />
     <Button
-            Text={"Copy Your Referrer Link"}
+            Text={"Copy Your Referral Link"}
             lightBorder
             nav
             m={"10px"}

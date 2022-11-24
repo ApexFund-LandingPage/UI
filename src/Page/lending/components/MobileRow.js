@@ -22,6 +22,7 @@ const MobileRow = () => {
           <DetailBox 
             heading="Loanable $xHBT"
             value="0000" center
+            subText="$xHBT"
           />
           <DetailBox 
             heading="Loan Status"
