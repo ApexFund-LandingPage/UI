@@ -4,9 +4,6 @@ import { useLocation } from "react-router-dom";
 
 const Text = (props) => {
 
-
-
-
     const StyledText = styled.p`
         font-size:${props.size ? props.size : "18px"};
         color: ${props.color ? props.color : "#ffffff"};
