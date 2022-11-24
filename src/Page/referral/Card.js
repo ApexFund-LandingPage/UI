@@ -175,10 +175,18 @@ const Card = () => {
             <StyledCard>
               <InnerCard>
                 <ReferalCode
-                  totalComissionEarned={info ? info.totalComissionEarnt : "0"}
+                totalComissionEarned={info ? info.totalComissionEarnt : "0"}
                 />
                 {info ? <ReferalDetails info={info} /> : null}
-                <Button Text="Claim Referral Commissions" m="3rem 0 1rem 0" />
+                <Button  m="3rem 0 1rem 0"  onClick={() => {
+                  claimReferralComission()
+                }}
+                Text={
+                  comissionClaimEnabled
+                    ? "Claim Referral Commissions"
+                    : "Claim Not Enabled"
+                }
+                disabled={!comissionClaimEnabled} />
               </InnerCard>
             </StyledCard>
           </>

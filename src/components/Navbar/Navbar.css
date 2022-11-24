@@ -226,7 +226,7 @@
                display: none;
             }
             .Logo{
-              width: 37px;
+              width: 100%;
               height: 50px;
               transition:  0.5s linear;
               
@@ -244,7 +244,7 @@
 
         @media(max-width: 768px){
           .Logo{
-            width: 37px;
+            width: 100%;
             height: 50px;
             transition:  0.5s linear;
         }

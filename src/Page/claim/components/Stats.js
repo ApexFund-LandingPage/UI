@@ -30,13 +30,7 @@ const Stats = ({ purchaseInfo, presaleContract ,presaleEndTime}) => {
     return <Spinner />;
   }
 
-  // uint256 totalHBTBought;
-  // uint256 totalUSDCPaid;
-  // uint256 totalHBTClaimed;
-  // uint256 totalVaultReceiptAmount;
-  // uint256 claimedTrenches;
-  // uint256 nextClaimTime;
-  // uint256 totalRewardClaimed;
+
 
   return (
     <>
@@ -68,16 +62,17 @@ const Stats = ({ purchaseInfo, presaleContract ,presaleEndTime}) => {
           />
           <DetailBox
             heading="$HBT Claimed"
-            value={purchaseInfo.totalHBTClaimed / 1e18}
             mm="2rem 0"
             center
+            value={purchaseInfo.totalHBTClaimed / 1e18}
             subText="$HBT"
           />
           <DetailBox
             heading="Claimable $HBT"
-            value={purchaseInfo.pendingClaimable / 1e18}
+           
             center
             subText="$HBT"
+            value={purchaseInfo.pendingClaimable / 1e18}
           />
         </Flex>
         <Line m="2rem 0" bg="rgba(255, 255, 255, 0.4)" />

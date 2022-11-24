@@ -220,6 +220,7 @@ const Card = () => {
               isLoanTaken={isLoanTaken}
             />
             <SecondRow
+              
               interestIncurred={interestIncurred}
               interestRate={interestRate}
               interestFreeDays={interestFreeDays}
@@ -268,7 +269,11 @@ const Card = () => {
                 m="0 0 0 0.5rem"
               />
             </Flex>
-            <MobileRow />
+            <MobileRow     loanableAmount={loanableAmount}
+               isLoanTaken={isLoanTaken}
+              interestIncurred={interestIncurred}
+              interestRate={interestRate}
+              interestFreeDays={interestFreeDays} />
             
             {!wallet.account ? (
               ConnectWalletView()

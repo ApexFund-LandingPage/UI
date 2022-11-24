@@ -179,8 +179,10 @@ const Card = () => {
       <InnerCard>
         {wallet.account ? (
           <div style={{ justifyContent: "center", margin: "4px" }}>
-            <Text Text={`Wallet: ${wallet.account}`} fw="bolder" />
-            <Text Text={`USDC balance: ${Number(usdcBalance) / 1e6}`} />
+            <Text Text={`Wallet: ${wallet.account}`} fw="bolder"
+              msize="0.7rem"
+              size="1rem" />
+            <Text Text={`USDC balance: ${Number(usdcBalance) / 1e6}`}  msize="0.7rem" />
           </div>
         ) : null}
         <Bar

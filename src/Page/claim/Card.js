@@ -152,7 +152,9 @@ const Card = () => {
               />
               <StyledCard>
                 <InnerCard>
-                  <MobileStats />
+                  <MobileStats  purchaseInfo={purchaseInfo}
+                  presaleContract={presaleContract}
+                  presaleEndTime={presaleEndTime} />
                 </InnerCard>
               </StyledCard>
             </>
@@ -170,7 +172,10 @@ const Card = () => {
               />
               <StyledCard>
                 <InnerCard>
-                  <MobileRewards />
+                  <MobileRewards   purchaseInfo={purchaseInfo}
+                  baseTime={baseTime}
+                  presaleContract={presaleContract}
+                  pendingReward={pendingReward}/>
                 </InnerCard>
               </StyledCard>
             </>
