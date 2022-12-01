@@ -212,6 +212,7 @@ const Card = () => {
         <Desktop>
           <Heading Text="Staking" 
             size="40px" faktumFont ls="0.1rem" lg="35px" xm="27px" ms="27px"
+            m="0 0 1rem 0"
           />
         </Desktop>
       
