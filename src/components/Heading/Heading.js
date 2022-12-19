@@ -1,41 +1,39 @@
 import React from 'react'
 import styled from 'styled-components'
 
+const Heading = (props) => {
 
   const StyledHeading = styled.h1`
-    font-size:${props=>props.size ? props.size : "36px"};
-    font-weight: ${props=>props.fw ? props.fw : "700"};
-    line-height: ${props=>props.lh ? props.lh : ""};
-    color: ${props=>props.color ? props.color : "#ffffff"};
-    font-family: ${props=>props.faktumFont ? "boldFont" : props.regular ? "regular" : "mortendFont"};
-    //font-family: mortendFont;
-    background: ${props=>props.gradient ? 'linear-gradient(#5E8CC9, #6166AE)' : null };
-    -webkit-background-clip: ${props=>props.gradient ? 'text' : null };
-    -webkit-text-fill-color: ${props=>props.gradient ? 'transparent' : null };
-    margin: ${ props=>props.m ? props.m : '' };
-    text-align: ${props=>props.center ? "center" : "left"} !important;
-    letter-spacing: ${props=>props.ls ? props.ls : ''};
-    text-decoration: none;
+    font-size:${props.size ? props.size : "36px"};
+    font-weight: ${props.fw ? props.fw : "700"};
+    line-height: ${props.lh ? props.lh : ""};
+    color: ${props.color ? props.color : "#000000"};
+    background: ${props.gradient ? 'linear-gradient(#5E8CC9, #6166AE)' : null };
+    -webkit-background-clip: ${props.gradient ? 'text' : null };
+    -webkit-text-fill-color: ${props.gradient ? 'transparent' : null };
+    margin: ${ props.m ? props.m : '' };
+    text-align: ${props.center ? "center" : "left"} !important;
+    letter-spacing: ${props.ls ? props.ls : ''};
 
     @media only screen and (max-width: 1500px) {
-      font-size:${props=>props.lg ? props.lg : "27px"};
+      font-size:${props.lg ? props.lg : "27px"};
+      line-height: ${props.lxh ? props.lxh : ""};
     }
 
-    @media only screen and (max-width: 1200px) {
-      font-size:${props=>props.xm ? props.xm : "25px"};
+    @media only screen and (max-width: 1300px) {
+      font-size:${props.xm ? props.xm : "25px"};
+      line-height: ${props.lsh ? props.lsh : ""};
     }
 
     @media only screen and (max-width: 768px) {
-      font-size:${props=>props.ms? props.ms : "16px"};
+      font-size:${props.ms? props.ms : "16px"};
+      line-height: ${props.lmh ? props.lmh : ""};
     }
     `
-const Heading = (props) => {
-
-
     
     return (
-      <StyledHeading {...props}> 
-        {props.Text ? props.Text : ""}
+      <StyledHeading> 
+        {props.Text ? props.Text : "Default Heading"}
       </StyledHeading>
     )
 }

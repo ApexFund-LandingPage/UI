@@ -15,11 +15,12 @@ export const StyledBurger = styled.button`
   cursor: pointer;
   padding: 0;
   z-index: 10;
+  margin: -0.25rem 0 0 0;
 
   span {
     width: 2rem;
     height: 0.25rem;
-    background: #FFFFFF; // ${({ theme, open }) => open ? theme.primaryDark : theme.primaryLight};
+    background: linear-gradient(214.95deg, #6B56DF 15.12%, #BA4BFB 75.31%);
     border-radius: 10px;
     transition: all 0.3s linear;
     position: relative;

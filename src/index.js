@@ -6,12 +6,11 @@ import { Provider } from 'react-redux';
 import store from './redux/store';
 import { BrowserRouter as Router } from 'react-router-dom'
 import { UseWalletProvider } from 'use-wallet';
-import CONFIG from './config';
 
 ReactDOM.render(<Router>
     <Provider store={store}>
         <UseWalletProvider
-            chainId={CONFIG.CHAIN_ID}
+            chainId={1}
             connectors={{
               // This is how connectors get configured
               portis: { dAppId: 'my-dapp-id-123-xyz' },
