@@ -53,10 +53,15 @@ const Content = (props) => {
                    // center m="2rem 0 0 0"
                 />
             </Image>
-            <Text 
+            {/* <Text 
                 color="#150422" size="16px" lh="24px" fw="400" m="2rem 0 0 0" xmsize="16px" msize="16px"
-                Text="As the world faces recession and financial challenges, ApexFund is able to help its users generate safe & secure profits. Our team takes care to use the most secure trading strategies in order to minimize any risk involved with the trading process. In this way, we produce consistently safe profits. Rest assured that all trades are placed and thoroughly analysed by actual human beings. We never rely on bots or AI trading." />
-        </CustomWidth>
+                Text="As the world faces recession and financial challenges, ApexPrime is able to help its users generate safe & secure profits. Our team takes care to use the most secure trading strategies in order to minimize any risk involved with the trading process. In this way, we produce consistently safe profits. Rest assured that all trades are placed and thoroughly analysed by actual human beings. We never rely on bots or AI trading." /> */}
+          <Text 
+                color="#150422" size="16px" lh="24px" fw="400" m="2rem 0 0 0" xmsize="16px" msize="16px"
+                Text="As the world faces recession and financial challenges.We never rely on bots or AI trading." />
+      
+          
+          </CustomWidth>
 
         <Margin />
 
@@ -69,10 +74,17 @@ const Content = (props) => {
                     center lh="0.75"
                 />
             </Image>
-            <Text 
+            {/* <Text 
                 color="#150422" size="16px" lh="24px" fw="400" m="3rem 0 0 0" xmsize="16px" msize="16px"
                 Text="We believe in 100% transparency with our members. We never want you to wonder about whether or not your profits are legitimate or if they’re coming from money rotation from other members. This is why we allow you total access to our real-time trading history so you can see the trades we are completing in the market each day. " />
-        </CustomWidth>
+         */}
+          
+        <Text 
+                color="#150422" size="16px" lh="24px" fw="400" m="3rem 0 0 0" xmsize="16px" msize="16px"
+                Text="We believe in 100% transparency with our members." />
+        
+          
+          </CustomWidth>
     </ResponsiveContent>
   )
 }

@@ -23,7 +23,7 @@ const TextContainer = () => {
         <div style={{width:'16rem'}}>
           <Text Text="MOST SECURE CRYPTO WALLET" lg />
         </div>
-        <Heading Text="ApexFund Reviving Defi"
+        <Heading Text="ApexPrime Reviving Defi"
           m="0.5rem 0 1rem 0" lh="96px" lxh="80px" lsh="60px" lmh="50px"
           color="#150422" ls="0.2px" 
           size="90px" lg="75px" xm="65px" ms="50px"
@@ -43,12 +43,12 @@ const TextContainer = () => {
             />
           </Flex>
 
-          <Flex m="0.5rem 0 0 0">
+          {/* <Flex m="0.5rem 0 0 0">
             <Svg />
             <Text Text="Stake & Earn up to 1.60% daily" 
               color="#505B6D" size="20px" ls="0.2px" fw="400" m="0.4px 0 0 0.5rem"
             />
-          </Flex>
+          </Flex> */}
 
           <Flex m="0.5rem 0 0 0">
             <Svg />

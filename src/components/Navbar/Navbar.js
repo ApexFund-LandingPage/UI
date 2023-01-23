@@ -5,7 +5,7 @@ import { Burger, Menu } from './components';
 import FocusLock from 'react-focus-lock';
 import { Link } from 'react-router-dom'
 import Button from '../Button/Button'
-import logo from './logo.svg'
+import logo from './logo.png'
 
 const Link2 = styled(Link)`
   display: flex;
@@ -50,7 +50,7 @@ const Navbar = () => {
         <div>
           <Link to="/" spy={true} smooth={true} 
             onClick={()=> isActive({...navItem})}
-          ><img src={logo} alt="Logo" className="Logo" /></Link>
+          ><img src={logo} alt="Logo" className="Logo"/></Link>
         </div>
         <div className='RightContainer'>
           <div className='PC'>
@@ -73,7 +73,7 @@ const Navbar = () => {
                 color: active.fund ? '#000' : null
               }}
               >
-                ApexFund
+                ApexPrime
               </Link2>  
 
               <Link2 to="/"

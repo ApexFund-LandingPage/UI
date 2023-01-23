@@ -22,7 +22,7 @@ const Head = () => {
             size="48px" lg="42px" sm="38px" ms="33px"
         />
       </div>
-      <Text Text="Simplify your life by trusting ApexFund with:" 
+      <Text Text="Simplify your life by trusting ApexPrime with:" 
         color="#E0E0E0" size="16px" ls="0.2px" fw="400" m="0.4px 0 0 0.5rem" center 
       />
     </div>

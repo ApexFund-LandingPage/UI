@@ -13,7 +13,7 @@ const Head = () => {
         m="0.5rem 0 1rem 0" center fw="800"
         size="48px" lg="43px" sm="37px" ms="33px"
       />
-      <Text Text="As a member, you deserve the very best. Here’s what you can expect from ApexFund:" 
+      <Text Text="As a member, you deserve the very best. Here’s what you can expect from ApexPrime:" 
         color="#737373" size="16px" ls="0.2px" fw="400" m="0.4px 0 0 0.5rem" center 
       />
     </div>

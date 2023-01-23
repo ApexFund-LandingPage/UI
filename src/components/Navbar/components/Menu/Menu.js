@@ -57,7 +57,7 @@ const Menu = ({ open, setOpen,...props }) => {
 
   return (
     <StyledMenu open={open}  aria-hidden={!isHidden} {...props}  >
-      <Link1 to="home" spy={true} smooth={true}><img src="../../logo.svg" alt="Logo" style={{width:"3rem",height:"3rem"}}/></Link1>
+      <Link1 to="home" spy={true} smooth={true}><img src="../../logo.png" alt="Logo" style={{width:"3rem",height:"3rem"}}/></Link1>
 
       <MenuItems >
         <H to="/" onClick={()=> setOpen(false)}>HOME</H> 
